@@ -57,7 +57,7 @@ const NAVABOARD = NAVABOARD_SURFACE.append('rect')
                             })
                             .on("touchstart", function() {pr('____','Touched')});
 
-//gfhgh
+//gfhgh New
 
 
 var EWord = [];
