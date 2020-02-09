@@ -55,7 +55,7 @@ const NAVABOARD = NAVABOARD_SURFACE.append('rect')
                                 Nava_Note.push(Coord);
                                 }
                             })
-                            .on("touchstart", function() {pr('____','Touched')};
+                            .on("touchstart", function() {pr('____','Touched')});
 
 //gfhgh
 
