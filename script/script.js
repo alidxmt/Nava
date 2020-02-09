@@ -1,8 +1,8 @@
 //functions
 
-function pr(a,b) {console.log(a,b)};
+function pr(a,b) {console.log(a,b)}; 
 
-//constant variables
+//constant variables i
 const MAIN_DIV = d3.select('#main-div');
 const MAIN_SVG = MAIN_DIV.append('svg')
                             .attr('id','main-svg');
