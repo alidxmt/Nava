@@ -1,0 +1,19 @@
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+#main-div {
+    height: 100%;
+    background: rgb(255, 255, 255);
+}
+#main-svg {
+    width: 100%;
+    height: 100%;
+}
+
+#navaboard-rect {
+  
+  width: 100%;
+  height: 100%;
+  fill:rgb(69, 92, 5)
+}
