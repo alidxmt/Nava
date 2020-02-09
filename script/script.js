@@ -54,7 +54,8 @@ const NAVABOARD = NAVABOARD_SURFACE.append('rect')
                                     NAVABOARD_BASE.select("#"+circle_ID_toremove).transition().delay(4000).remove();                                    
                                 Nava_Note.push(Coord);
                                 }
-                            });
+                            })
+                            .on("mousemove", function() {pr('____','Touched')};
 var EWord = [];
 var ECode = 0;
 var DefineState = {'task':'','value':''};
