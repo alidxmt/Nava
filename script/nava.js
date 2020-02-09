@@ -1,36 +1,23 @@
+var oscillator = null;
+var isPlaying = false;
+var context = new AudioContext();
+var volume = context.createGain();
 
 
-    var oscillator;
-var context;
-var volume;
+function play(Lfreq, Lgain) {
 
-function startNavaPlay() {}
-
-
-function play(Lfreq, Lgain,STPL) {
-
-    context = new AudioContext();
-    volume = context.createGain();
     //stop the oscillator if it's already playing
-    if (!Start_Nava) {
+    if (isPlaying) {
+        //oscillator.stop();
+        //isPlaying = false;
+        volume.gain.setValueAtTime(Lgain, context.currentTime);
         
-        console.log('if (Start_Nava) {')
-        
-        //volume.gain.setValueAtTime(Lgain, context.currentTime);
-        
-        //oscillator.frequency.setValueAtTime(Lfreq, context.currentTime);
+        oscillator.frequency.setValueAtTime(Lfreq, context.currentTime);
+        console.log('Playing at frequency ' + Lfreq + ' with volume ' + Lgain);
 
-        if (STPL=='ST') {
-            console.log('_______beist_____',oscillator)
-            oscillator.stop();
-            isPlaying = false;
-            console.log('osc is stoped')
-
-        }
     }
     else {
     //re-initialize the oscillator
-    console.log('else')
 
     //create the volume node;
     volume.connect(context.destination);
@@ -52,6 +39,3 @@ function play(Lfreq, Lgain,STPL) {
     console.log('Playing at frequency ' + Lfreq + ' with volume ' + Lgain);
 }
 }
-
-
-//not

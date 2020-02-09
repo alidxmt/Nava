@@ -1,10 +1,8 @@
 //functions
 
+function pr(a,b) {console.log(a,b)};
 
-
-function pr(a,b) {console.log(a,b)}; 
-
-//constant variables i
+//constant variables
 const MAIN_DIV = d3.select('#main-div');
 const MAIN_SVG = MAIN_DIV.append('svg')
                             .attr('id','main-svg');
@@ -28,12 +26,12 @@ const NAVABOARD = NAVABOARD_SURFACE.append('rect')
                             })
                             .on("mouseup", function() {
                                 Start_Nava = false;
-                                play(440,0,'ST');
+                                play(440,0);
                             })
                             .on("mousemove", function() {
                                 if (Start_Nava==true) {
                                     Coord = d3.mouse(this);
-                                    play(Coord[0],(0.0001*(parseInt(Coord[1]))),'PL')
+                                    play(Coord[0],(0.0001*(parseInt(Coord[1]))))
 
                                     // play(440,(parseInt(10*Math.random())/100));
                                     let circle_ID_toremove = 'circle-path--'+Coord[0]+'-'+Coord[1];   
@@ -56,12 +54,7 @@ const NAVABOARD = NAVABOARD_SURFACE.append('rect')
                                     NAVABOARD_BASE.select("#"+circle_ID_toremove).transition().delay(4000).remove();                                    
                                 Nava_Note.push(Coord);
                                 }
-                            })
-                            .on("touchstart", function() {pr('____','Touched')});
-
-//gfhgh New
-
-
+                            });
 var EWord = [];
 var ECode = 0;
 var DefineState = {'task':'','value':''};
@@ -73,7 +66,6 @@ function NavaBoardDo(LocalDefineState) {
         d3.select('#navaboard-rect').style('fill',LocalDefineState.value)        
     }
     if (LocalDefineState.task=='nava') {
-        startNavaPlay();
         play(400,0.1);
         //DefineState = {'task':'','value':''};
     }
@@ -105,4 +97,3 @@ Nava_Note = [];
 
 
 //things to do
-
