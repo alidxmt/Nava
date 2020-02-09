@@ -56,6 +56,9 @@ const NAVABOARD = NAVABOARD_SURFACE.append('rect')
                                 }
                             })
                             .on("touchstart", function() {pr('____','Touched')};
+
+//
+
 var EWord = [];
 var ECode = 0;
 var DefineState = {'task':'','value':''};
