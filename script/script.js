@@ -59,6 +59,7 @@ const NAVABOARD = NAVABOARD_SURFACE.append('rect')
 
 //
 
+
 var EWord = [];
 var ECode = 0;
 var DefineState = {'task':'','value':''};
